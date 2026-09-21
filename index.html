@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ranger Steel Solutions — Wire Manufacturing &amp; Technical Solutions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: { deep: '#101F38', DEFAULT: '#1B3864', 700: '#254A7E' },
+          brandred: { DEFAULT: '#C9362E', 600: '#AC2C25', 100: '#F7E2E0' },
+          steel: { 100: '#EEF0F2', 300: '#9AA3AE', 600: '#40495A' },
+        },
+        fontFamily: {
+          display: ['Anton', 'system-ui', 'sans-serif'],
+          body: ['"IBM Plex Sans"', 'system-ui', 'sans-serif'],
+        },
+      }
+    }
+  }
+</script>
+<style>
+  :root {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); scroll-behavior: smooth; }
+  *, *::before, *::after { box-sizing: inherit; }
+  body { background: #101F38; overflow-x: hidden; }
+  .tabular { font-variant-numeric: tabular-nums; }
+  .font-display { letter-spacing: -0.01em; }
+
+  nav.site-nav { top: env(safe-area-inset-top, 0px); }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal { opacity: 0; transform: translateY(14px); animation: revealUp 0.9s cubic-bezier(.2,.7,.2,1) forwards; }
+    .reveal-1 { animation-delay: .05s; }
+    .reveal-2 { animation-delay: .22s; }
+    .reveal-3 { animation-delay: .38s; }
+    @keyframes revealUp { to { opacity: 1; transform: translateY(0); } }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; animation: none; }
+  }
+
+  .rule { border-color: rgba(255,255,255,0.14); }
+  .rule-dark { border-color: rgba(16,31,56,0.14); }
+
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid #C9362E;
+    outline-offset: 3px;
+  }
+</style>
+</head>
+<body class="font-body text-steel-600 antialiased">
+
+<!-- NAV -->
+<nav class="site-nav sticky z-50 bg-navy-deep/95 backdrop-blur border-b border-white/10">
+  <div class="max-w-[1400px] mx-auto px-6 md:px-10 h-16 md:h-20 flex items-center justify-between">
+    <a href="#top" class="shrink-0 flex items-center">
+      <img src="data:image/png;base64,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" alt="Ranger Steel Solutions" class="h-7 md:h-8 w-auto">
+    </a>
+    <div class="hidden lg:flex items-center gap-9 text-[15px] text-steel-100/90">
+      <a href="#legacy" class="hover:text-white transition-colors">Legacy</a>
+      <a href="#capabilities" class="hover:text-white transition-colors">Capabilities</a>
+      <a href="#quality" class="hover:text-white transition-colors">Quality</a>
+      <a href="#industries" class="hover:text-white transition-colors">Industries</a>
+      <a href="#group" class="hover:text-white transition-colors">Our Group</a>
+    </div>
+    <a href="#contact" class="shrink-0 bg-brandred hover:bg-brandred-600 text-white text-[15px] font-medium px-5 py-2.5 rounded-sm transition-colors">
+      Talk to our team
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="top" class="relative bg-navy-deep overflow-hidden">
+  <div class="max-w-[1400px] mx-auto px-6 md:px-10 pt-16 md:pt-24 pb-14 md:pb-20 grid lg:grid-cols-[1.15fr_0.85fr] gap-12 lg:gap-8 items-center">
+    <div class="reveal reveal-1">
+      <h1 class="font-display text-white text-[50px] leading-[1.02] sm:text-[64px] sm:leading-[1.0] lg:text-[76px] lg:leading-[0.98] tracking-tight">
+        Seventy-five years of wire manufacturing, now built for North America.
+      </h1>
+      <p class="mt-7 max-w-[540px] text-[17px] md:text-[18px] leading-relaxed text-steel-100/80">
+        Ranger Steel Solutions manufactures and supplies wire-based technical solutions, backed by a South American industrial group with decades of proven performance.
+      </p>
+      <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
+        <a href="#contact" class="bg-brandred hover:bg-brandred-600 text-white text-[15px] font-medium px-6 py-3.5 rounded-sm transition-colors">
+          Talk to our team
+        </a>
+        <a href="#capabilities" class="text-[15px] font-medium text-steel-100 hover:text-white underline underline-offset-4 decoration-white/30 hover:decoration-white transition-colors">
+          See our capabilities
+        </a>
+      </div>
+    </div>
+
+    <div class="reveal reveal-2 relative flex justify-center lg:justify-end">
+      <svg viewBox="0 0 340 340" class="w-[260px] sm:w-[320px] lg:w-[360px]" aria-hidden="true">
+        <circle cx="170" cy="170" r="150" stroke="#233A5C" stroke-width="1"/>
+        <circle cx="170" cy="170" r="118" stroke="#233A5C" stroke-width="1"/>
+        <path d="M40 170C40 96 96 40 170 40" stroke="#C9362E" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M300 170C300 96 244 40 170 40" stroke="#33496D" stroke-width="1.5"/>
+        <circle cx="170" cy="170" r="86" stroke="#EEF0F2" stroke-opacity="0.45" stroke-width="1"/>
+        <circle cx="170" cy="170" r="54" stroke="#EEF0F2" stroke-opacity="0.3" stroke-width="1"/>
+        <path d="M170 150L177 168L196 168L181 179L187 197L170 186L153 197L159 179L144 168L163 168Z" fill="#C9362E"/>
+        <circle cx="40" cy="170" r="4" fill="#EEF0F2"/>
+        <circle cx="170" cy="40" r="4" fill="#EEF0F2"/>
+        <circle cx="300" cy="170" r="4" fill="#EEF0F2"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Spec / stat row -->
+  <div class="reveal reveal-3 border-t border-white/10">
+    <div class="max-w-[1400px] mx-auto px-6 md:px-10 grid grid-cols-2 md:grid-cols-4">
+      <div class="pt-6 pb-6 md:pt-8 md:pb-8 pr-4 md:pr-6">
+        <div class="font-display text-white text-[32px] md:text-[40px] leading-none tabular">75+</div>
+        <div class="mt-2 text-[13px] md:text-[14px] text-steel-100/65">Years of manufacturing trajectory</div>
+      </div>
+      <div class="pt-6 pb-6 md:pt-8 md:pb-8 pl-4 md:pl-6 border-l border-white/10">
+        <div class="font-display text-white text-[32px] md:text-[40px] leading-none tabular">5</div>
+        <div class="mt-2 text-[13px] md:text-[14px] text-steel-100/65">Countries served as a group</div>
+      </div>
+      <div class="pt-8 pb-6 md:pt-8 md:pb-8 pr-4 md:pr-0 md:pl-6 border-t md:border-t-0 md:border-l border-white/10">
+        <div class="font-display text-white text-[32px] md:text-[40px] leading-none tabular">$300M</div>
+        <div class="mt-2 text-[13px] md:text-[14px] text-steel-100/65">Group sales, South America</div>
+      </div>
+      <div class="pt-8 pb-6 md:pt-8 md:pb-8 pl-4 md:pl-6 border-t md:border-t-0 border-l border-white/10">
+        <div class="font-display text-white text-[24px] md:text-[28px] leading-none">ISO Certified</div>
+        <div class="mt-2 text-[13px] md:text-[14px] text-steel-100/65">International quality standards</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- LEGACY -->
+<section id="legacy" class="bg-steel-100">
+  <div class="max-w-[1400px] mx-auto px-6 md:px-10 py-20 md:py-28 grid lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-16">
+    <h2 class="font-display text-navy-deep text-[36px] sm:text-[44px] leading-[1.04] tracking-tight">
+      We know how to make things right.
+    </h2>
+    <div class="max-w-[560px]">
+      <p class="text-[17px] leading-relaxed text-steel-600">
+        Ranger Steel Solutions carries forward more than 75 years of experience designing, manufacturing, and delivering wire-based solutions. That legacy is the foundation of every product we ship and every technical recommendation we make.
+      </p>
+      <p class="mt-5 text-[17px] leading-relaxed text-steel-600">
+        We've built our reputation on being a supplier companies can rely on, year after year — not on a single project, but on a standard we hold across every one.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- GROUP -->
+<section id="group" class="bg-navy">
+  <div class="max-w-[1400px] mx-auto px-6 md:px-10 py-20 md:py-28 grid lg:grid-cols-[1fr_0.9fr] gap-12 lg:gap-16 items-center">
+    <div>
+      <h2 class="font-display text-white text-[36px] sm:text-[44px] leading-[1.04] tracking-tight max-w-[520px]">
+        Part of a proven South American industrial group.
+      </h2>
+      <p class="mt-6 max-w-[520px] text-[17px] leading-relaxed text-white/75">
+        Ranger Steel Solutions is the North American presence of a long-established group of manufacturing companies with deep roots across South America, generating $300 million USD in sales. Our clients don't just get a supplier — they get access to the scale and stability of a group with decades of proven industrial performance.
+      </p>
+    </div>
+    <div class="flex justify-center lg:justify-end">
+      <svg viewBox="0 0 380 520" class="w-full max-w-[240px] sm:max-w-[270px]" aria-hidden="true">
+        <path d="M227.316,490.373L232.048,494.108L237.147,495.671L235.509,498.848L232.048,499.161L230.2,496.922L228.994,499.496L225.875,501.485L221.929,500.755L219.282,498.837L215.467,497.91L210.88,494.384L207.17,491.042L202.15,484.2L205.152,485.468L210.264,489.549L215.1,491.766L216.975,488.935L218.154,484.761L221.51,482.279L224.105,482.989L225.495,485.786ZM260.819,473.925L263.729,476.549L262.641,478.608L257.726,480.382L256.088,478.309L252.994,480.976L251.172,478.309L255.537,474.8L258.63,476.261ZM252.129,219.782L249.088,220.189L248.433,219.858L249.494,218.837L249.416,217.376L251.513,216.893L252.273,217.025ZM235.181,189.271L234.25,190.237L231.511,190.211L229.374,190.347L229.165,188.706L229.689,188.147L232.664,188.167L234.526,188.505ZM193.997,190.645L192.896,191.286L190.851,190.671L188.767,189.277L189.213,188.401L190.733,188.134L191.572,188.264L194.023,188.609L195.95,189.53L196.553,190.574ZM209.739,182.94L212.898,183.549L213.344,182.888L216.188,182.907L218.351,183.903L219.308,183.804L219.963,185.171L221.956,185.099L221.838,186.247L223.463,186.384L225.245,187.796L223.895,189.355L222.165,188.524L220.501,188.687L219.295,188.505L218.639,189.199L217.25,189.44L216.686,188.505L215.48,189.057L214.025,191.68L213.095,191.072L212.911,189.971L210.486,189.323L208.769,189.589L206.554,189.31L204.85,190.023L202.897,188.83L203.212,187.595L206.567,188.128L209.32,188.433L210.631,187.582L208.966,185.914L208.992,184.439L206.698,183.837L207.511,182.77ZM183.891,171.627L185.333,173.068L188.741,172.628L190.026,173.548L193.106,175.98L195.373,177.748L196.579,177.695L198.742,178.488L198.48,179.589L201.167,179.747L203.92,181.339L203.487,182.245L201.062,182.737L198.611,182.927L196.107,182.626L190.891,182.999L193.329,180.84L191.848,179.826L189.501,179.569L188.243,178.441L187.378,176.219L185.32,176.371L181.925,175.317L180.837,174.493L176.092,173.888L174.821,173.122L176.184,172.134L172.606,171.934L169.997,173.981L168.49,174.034L167.966,174.991L166.157,175.423L164.61,175.051L166.524,173.834L167.31,172.415L168.962,171.54L170.823,170.764L173.576,170.389L174.454,169.953L177.6,170.235L180.47,170.282ZM191.69,167.689L190.799,167.884L189.881,165.591L188.518,164.433L189.305,161.886L190.406,162.042L191.677,165.374ZM190.655,156.337L186.683,156.991L186.434,155.482L188.138,155.157L190.55,155.281ZM193.643,156.295L193.014,159.181L192.346,158.667L192.398,156.543L190.773,154.929L190.76,154.466ZM242.194,64.833L244.841,65.54L248.21,65.397L246.414,67.553L245.077,67.891L240.45,65.665L239.546,63.891L240.922,62.241ZM248.957,50.969L247.187,51.073L242.469,49.317L239.087,46.662L240.345,46.193L245.13,47.607L248.852,49.951ZM24.307,54.263L22.472,55.024L16.495,52.518L15.394,50.555L12.143,48.596L11.488,46.996L7.739,45.973L6.337,42.878L6.651,41.546L10.466,42.8L12.707,43.662L16.128,44.27L17.36,46.231L19.169,48.9L22.8,51.204ZM269.614,42.023L267.203,47.006L269.575,45.099L272.026,46.308L270.742,48.273L273.979,49.809L275.657,48.444L279.288,50.168L278.161,54.226L280.703,53.284L281.175,56.191L282.303,59.561L280.769,64.268L279.131,64.466L276.732,63.468L277.518,59.077L276.509,58.39L272.288,63.054L270.113,62.864L272.682,60.354L269.182,59.04L265.276,59.36L258.211,59.196L257.647,57.592L259.915,55.673L258.329,54.188L261.396,50.856L265.158,41.848L267.412,38.558L270.571,36.54L272.262,36.798L271.554,38.38ZM137.156,0L137.949,2.391L143.035,1.06L149.812,3.962L153.442,6.485L156.051,9.579L160.612,11.358L164.466,14.068L170.482,14.436L174.441,15.062L173.851,20.514L174.978,26.709L177.613,33.434L183.039,39.01L185.844,37.115L187.81,31.032L185.91,21.388L183.341,18.095L189.174,15.137L193.289,10.623L195.308,6.072L195.02,1.618L194.326,0L248.873,0L248.873,0L250.451,3.195L248.983,7.354L253.833,11.029L257.11,14.706L262.903,16.342L265.25,18.362L266.692,23.63L269.523,24.442L270.991,26.75L271.253,33.504L268.605,35.725L265.997,37.778L259.994,39.845L255.419,44.569L249.258,45.493L241.473,44.29L236.007,44.251L232.245,44.646L229.191,48.701L224.551,51.176L219.295,58.436L215.1,63.387L218.194,62.512L224.04,55.414L231.681,50.809L237.134,50.253L240.345,52.976L236.911,56.662L238.065,62.476L239.257,66.477L243.989,69.094L250.006,68.334L253.65,62.395L253.899,66.246L256.258,68.148L251.749,71.556L243.688,74.613L240.07,76.677L236.007,80.321L233.241,79.946L233.097,75.66L239.428,71.416L233.595,71.582L229.545,72.212L230.174,73.902L226.294,76.376L222.545,78.128L218.705,79.623L216.621,82.894L216.162,83.719L216.123,86.34L217.329,88.938L218.836,89.062L218.456,87.272L219.544,88.359L219.255,89.756L216.791,90.546L215.048,90.448L212.361,91.302L210.775,91.54L208.651,91.778L205.624,93.175L210.971,92.269L212.046,93.184L206.947,94.624L204.627,94.632L204.732,94.047L203.631,95.378L204.706,95.597L203.92,99.011L201.259,102.636L200.997,101.43L200.197,101.183L199.004,100.011L199.751,102.541L200.616,103.38L200.721,105.13L199.555,106.934L197.497,110.606L197.169,110.421L198.296,107.294L196.435,105.523L196.003,101.652L195.308,103.672L196.081,106.621L193.787,105.932L196.186,107.388L196.343,111.75L197.379,112.066L197.759,113.634L198.27,118.139L195.963,121.449L192.188,122.76L189.803,125.339L187.981,125.621L186.133,127.228L185.621,128.696L181.624,131.505L179.566,133.553L177.849,136.096L177.285,139.111L177.94,142.047L179.146,145.627L180.772,148.567L180.785,150.358L182.515,155.116L182.397,157.857L182.24,159.434L181.335,161.899L180.247,162.403L178.452,161.92L177.875,160.153L176.485,159.222L174.559,155.73L172.868,152.601L172.317,150.993L173.064,148.244L172.055,145.958L169.211,142.46L167.795,141.812L164.112,143.724L163.47,143.511L161.7,141.549L159.419,140.507L155.304,141.042L152.066,140.571L149.287,140.864L147.741,141.456L148.448,142.638L148.383,144.34L149.156,145.168L148.462,145.711L147.112,145.097L145.748,145.888L143.101,145.761L140.387,143.547L137.215,144.071L134.568,143.099L132.3,143.398L129.233,144.376L125.917,147.465L122.299,149.254L120.307,151.223L119.481,153.073L119.442,155.889L119.625,157.843L120.307,159.222L120.32,159.229L120.307,159.236L118.904,162.757L118.262,165.645L118,170.965L117.646,172.895L118.275,175.038L119.402,176.947L120.136,179.971L122.548,182.861L123.4,185.066L124.829,186.964L128.695,187.985L130.19,189.589L133.388,188.518L136.167,188.128L138.893,187.439L141.187,186.781L143.494,185.21L144.372,182.953L144.66,179.694L145.29,178.554L147.754,177.53L151.607,176.623L154.832,176.762L157.047,176.431L157.912,177.258L157.794,179.141L155.841,181.451L154.976,183.811L155.645,184.485L155.094,186.149L154.19,189.148L153.259,188.16L152.499,188.225L152.512,188.791L153.207,188.81L153.141,189.848L152.551,191.506L152.866,192.094L152.486,193.462L152.722,193.823L152.302,195.748L151.581,196.75L150.926,196.872L150.205,198.187L151.385,198.872L151.699,198.308L152.774,198.789L153.154,198.936L153.954,198.27L154.989,198.219L155.33,198.526L155.894,198.34L157.584,198.68L159.262,198.577L160.442,198.161L160.861,197.738L162.028,197.937L162.893,198.193L163.85,198.103L164.571,197.776L166.235,198.302L166.812,198.385L167.926,199.089L168.975,199.934L170.299,200.515L171.256,201.549L170.941,201.913L170.757,202.754L171.138,204.129L170.299,205.413L169.906,206.917L169.788,208.57L169.984,209.531L170.076,211.211L169.512,211.577L169.171,213.172L169.421,214.153L168.687,215.103L168.844,216.102L169.407,216.711L170.325,218.724L171.741,220.214L173.445,221.79L174.755,223.114L174.677,223.894L176.132,224.063L176.472,223.763L177.482,224.668L179.264,224.406L180.824,223.47L183.026,222.727L184.271,221.628L186.277,221.84L186.146,222.202L188.177,222.334L189.803,222.971L190.982,224.075L192.359,225.098L194.233,225.21L196.973,222.64L198.467,222.246L198.506,221.027L199.175,217.897L201.259,216.177L203.553,216.108L203.841,215.336L206.698,215.644L209.556,213.77L210.984,212.938L212.741,211.142L214.025,211.369L214.982,212.352L214.274,213.606L214.17,214.481L212.033,214.914L213.226,216.598L213.187,218.536L211.574,220.683L212.951,223.614L214.524,223.376L215.336,220.708L214.209,219.407L214.025,216.604L218.561,215.091L218.063,213.342L219.334,212.17L220.645,214.782L223.201,214.839L225.56,216.912L225.704,218.135L228.968,218.173L232.861,217.79L234.945,219.444L237.737,219.901L239.769,218.749L239.821,217.815L244.33,217.596L248.695,217.539L245.601,218.636L246.847,220.383L249.757,220.658L252.509,222.477L253.099,225.428L254.986,225.347L256.415,226.213L258.814,227.564L261.055,229.959L261.16,231.846L262.536,231.933L264.489,233.726L265.918,234.997L270.283,235.734L270.676,235.071L273.625,234.805L277.531,235.79L278.777,236.192L281.451,237.059L285.304,240.146L285.907,241.641L287.152,241.468L288.057,243.488L290.088,249.862L292.041,250.46L292.133,252.975L289.407,255.976L290.534,257.073L296.97,257.64L297.101,261.295L299.867,258.904L304.441,260.21L310.497,262.435L312.266,264.569L311.677,266.586L315.91,265.463L322.988,267.394L328.428,267.252L333.815,270.27L338.468,274.361L341.273,275.413L344.38,275.561L345.704,276.713L346.936,281.373L347.539,283.596L346.097,289.679L344.236,292.083L339.111,297.233L336.791,301.435L334.09,304.675L333.186,304.744L332.164,307.5L332.426,314.554L331.416,320.402L331.023,322.922L329.87,324.432L329.228,329.579L325.531,334.644L324.915,338.682L321.966,340.385L321.114,342.756L317.155,342.743L311.428,344.264L308.872,346.033L304.795,347.199L300.509,350.382L297.429,354.379L296.891,357.409L297.494,359.662L296.826,363.816L296,365.842L293.444,368.13L289.407,375.539L286.209,378.918L283.731,380.931L282.067,385.047L279.668,387.537L278.082,390.305L273.979,392.763L271.292,391.877L269.313,392.35L265.957,390.455L263.48,390.597L261.265,388.161L261.016,390.455L265.643,394.255L265.145,397.348L267.412,399.311L267.229,401.531L263.729,407.415L258.329,409.909L251.028,410.882L247.03,410.415L247.804,413.212L247.056,416.757L247.725,419.169L245.536,420.864L241.813,421.534L238.314,419.771L236.898,421.035L237.409,425.87L239.873,427.351L241.866,425.804L242.941,428.362L239.598,429.897L236.675,432.998L236.138,438.096L235.273,440.839L231.839,440.856L228.981,443.502L227.933,447.427L231.524,451.315L234.997,452.393L233.739,457.254L229.44,460.346L227.081,466.884L223.751,469.13L222.27,471.804L223.437,477.85L225.862,481.278L224.328,480.976L221.09,480.935L219.334,482.4L216.057,484.567L215.467,490.268L213.921,490.415L209.818,488.416L205.65,484.179L201.115,480.754L199.974,477.015L201.01,473.602L199.175,469.777L198.703,460.215L200.263,454.964L204.103,450.809L198.572,449.261L202.045,444.613L203.277,436.064L207.327,437.854L209.228,427.468L206.79,426.161L205.65,432.354L203.356,431.651L204.496,424.586L205.741,415.662L207.406,412.431L206.371,407.878L206.069,402.689L207.603,402.542L209.831,395.245L212.348,388.161L213.894,381.675L213.055,375.266L214.143,371.783L213.698,366.615L215.834,361.571L216.49,353.688L217.656,345.366L218.797,336.553L218.534,330.188L217.774,324.763L214.117,322.56L213.803,320.995L206.58,317.177L200.053,313.039L197.248,310.711L195.74,307.608L196.343,306.53L193.25,301.631L189.659,294.78L186.224,287.428L184.73,285.754L183.59,283.05L180.759,280.654L178.163,279.172L179.343,277.536L177.587,274.052L178.714,271.493L181.611,269.19L183.55,266.462L182.764,264.871L181.375,266.567L179.199,264.97L179.933,263.94L179.317,260.635L180.588,260.087L181.27,257.819L182.646,255.471L182.384,253.986L184.389,253.209L186.88,251.755L186.395,250.626L187.745,250.355L187.588,248.53L188.44,247.21L190.248,246.963L191.782,244.674L193.171,242.76L191.834,241.889L192.516,239.769L191.703,236.427L192.477,235.467L191.9,232.368L190.432,230.412L189.213,229.356L188.44,227.372L189.331,226.388L188.413,226.139L187.732,224.924L185.923,223.894L184.324,224.132L183.59,225.41L182.122,226.338L181.322,226.463L180.968,227.228L182.698,229.225L181.715,229.698L181.191,230.238L179.487,230.424L178.858,228.23L178.386,228.858L177.18,228.641L176.446,227.16L174.952,226.917L174.008,226.488L172.448,226.494L172.344,227.291L171.924,226.737L169.945,225.921L169.211,225.148L169.63,224.506L169.486,223.695L168.477,222.808L167.048,222.084L165.803,221.609L165.554,220.527L164.597,219.87L164.833,220.946L164.112,221.828L163.273,220.802L162.107,220.439L161.608,219.689L161.635,218.567L162.107,217.395L161.084,216.874L161.923,216.159L160.665,214.99L158.961,213.493L158.161,212.233L156.628,211.066L154.793,209.379L155.199,208.797L155.802,209.36L156.077,209.101L155.448,207.93L154.347,207.601L153.941,208.487L151.83,208.43L150.519,208.07L149.012,207.329L146.994,207.094L145.958,206.289L144.097,205.635L141.816,205.565L140.151,204.822L138.198,203.27L134.083,199.211L132.195,197.981L129.233,196.994L127.188,197.27L124.265,198.699L122.43,199.07L119.861,198.071L117.135,197.353L113.727,195.613L111,195.079L106.884,193.307L103.83,191.486L102.913,190.464L100.881,190.237L97.159,189.024L95.638,187.27L91.719,185.086L89.897,182.645L89.032,180.754L90.251,180.379L89.871,179.266L90.71,178.256L90.723,176.908L89.504,175.144L89.176,173.581L87.944,171.593L84.746,167.655L81.076,164.535L79.306,162.036L76.187,160.392L75.518,159.4L76.069,156.895L74.207,155.951L72.058,153.96L71.153,151.098L69.2,150.763L67.077,148.588L65.373,146.564L65.216,145.267L63.263,142.104L61.965,138.875L62.031,137.243L59.396,135.547L58.177,135.735L56.093,134.555L55.516,136.291L56.119,138.336L56.473,141.513L57.718,143.241L60.418,146.121L61.021,147.099L61.572,147.395L62.057,148.819L62.699,148.763L63.433,151.425L64.547,152.469L65.321,153.926L67.601,155.999L68.807,159.777L69.895,161.545L70.904,163.429L71.101,165.537L72.857,165.672L74.325,167.48L75.636,169.256L75.558,169.967L74.024,171.419L73.382,171.399L72.412,168.994L70.026,166.725L67.405,164.792L65.543,163.776L65.661,160.836L65.111,158.646L63.381,157.39L60.877,155.571L60.392,156.096L59.475,155.033L57.233,154.043L55.084,151.662L55.346,151.355L56.853,151.585L58.203,150.044L58.334,148.181L55.529,145.21L53.393,144.057L52.056,141.435L50.706,138.659L49.015,135.257L47.534,131.395L46.931,129.181L44.571,126.673L42.867,126.148L42.474,124.893L40.429,124.67L39.119,123.485L35.737,123.044L34.819,122.334L34.374,119.9L30.835,115.394L27.807,109.071L27.938,108.004L26.326,106.48L23.508,102.581L23.009,98.739L21.07,96.139L21.869,92.162L21.738,87.986L20.571,84.207L22,79.495L22.878,70.213L22.223,63.162L21.07,58.564L20.021,56.043L20.453,54.978L25.723,56.828L27.663,61.924L28.554,60.509L27.977,56.062L26.745,51.552L26.247,51.543L19.208,46.03L16.6,43.575L10.007,41.195L7.975,36.043L8.499,32.418L3.833,29.864L3.204,24.972L0,21.706L0,0Z" fill="#EEF0F2" fill-opacity="0.08" stroke="#EEF0F2" stroke-opacity="0.45" stroke-width="1.1"/>
+        <line x1="216.69" y1="386.14" x2="126.76" y2="143.20" stroke="#C9362E" stroke-width="1" stroke-dasharray="1 5" stroke-opacity="0.75"/>
+        <line x1="193.49" y1="300.97" x2="126.76" y2="143.20" stroke="#C9362E" stroke-width="1" stroke-dasharray="1 5" stroke-opacity="0.75"/>
+        <line x1="261.43" y1="391.22" x2="126.76" y2="143.20" stroke="#C9362E" stroke-width="1" stroke-dasharray="1 5" stroke-opacity="0.75"/>
+        <line x1="184.47" y1="223.95" x2="126.76" y2="143.20" stroke="#C9362E" stroke-width="1" stroke-dasharray="1 5" stroke-opacity="0.75"/>
+        <line x1="188.30" y1="257.44" x2="126.76" y2="143.20" stroke="#C9362E" stroke-width="1" stroke-dasharray="1 5" stroke-opacity="0.75"/>
+        <circle cx="216.69" cy="386.14" r="4.5" fill="#EEF0F2"/>
+        <text x="225.69" y="390.64" fill="#EEF0F2" font-family="IBM Plex Sans" font-size="15">Chile</text>
+        <circle cx="193.49" cy="300.97" r="4.5" fill="#EEF0F2"/>
+        <text x="202.49" y="305.47" fill="#EEF0F2" font-family="IBM Plex Sans" font-size="15">Peru</text>
+        <circle cx="261.43" cy="391.22" r="4.5" fill="#EEF0F2"/>
+        <text x="270.43" y="395.72" fill="#EEF0F2" font-family="IBM Plex Sans" font-size="15">Argentina</text>
+        <circle cx="184.47" cy="223.95" r="4.5" fill="#EEF0F2"/>
+        <text x="193.47" y="228.45" fill="#EEF0F2" font-family="IBM Plex Sans" font-size="15">Panama</text>
+        <circle cx="188.30" cy="257.44" r="4.5" fill="#EEF0F2"/>
+        <text x="197.30" y="261.94" fill="#EEF0F2" font-family="IBM Plex Sans" font-size="15">Ecuador</text>
+        <circle cx="126.76" cy="143.20" r="11" fill="none" stroke="#C9362E" stroke-width="1" stroke-opacity="0.5"/>
+        <circle cx="126.76" cy="143.20" r="6.5" fill="#C9362E"/>
+        <text x="141.76" y="147.70" fill="#FFFFFF" font-family="IBM Plex Sans" font-size="15" font-weight="600">USA</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITIES / TURN-KEY -->
+<section id="capabilities" class="bg-steel-100">
+  <div class="max-w-[1400px] mx-auto px-6 md:px-10 py-20 md:py-28">
+    <h2 class="font-display text-navy-deep text-[36px] sm:text-[44px] leading-[1.04] tracking-tight max-w-[640px]">
+      Manufacturing and commercial reach, in one supplier.
+    </h2>
+    <p class="mt-6 max-w-[640px] text-[17px] leading-relaxed text-steel-600">
+      We don't just manufacture — we deliver complete solutions, combining in-house wire products with a broader commercial offering so every project has a single, reliable technical source.
+    </p>
+
+    <div class="mt-14 grid md:grid-cols-3 border-t rule-dark">
+      <div class="py-8 md:pr-10 border-b md:border-b-0 md:border-r rule-dark">
+        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+          <path d="M9,19 H25 A4,4 0 0 1 25,27 H9 A4,4 0 0 1 9,19 Z" stroke="#C9362E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="9" y1="23" x2="25" y2="23" stroke="#C9362E" stroke-width="1.5" stroke-linecap="round"/>
+          <rect x="12" y="12" width="6" height="7" stroke="#C9362E" stroke-width="1.5" stroke-linejoin="round"/>
+          <rect x="20" y="9" width="7" height="10" stroke="#C9362E" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+        <h3 class="mt-5 font-display text-navy-deep text-[21px] tracking-tight">Manufactured products</h3>
+        <p class="mt-3 text-[15px] leading-relaxed text-steel-600 max-w-[300px]">
+          Wire solutions engineered and produced with decades of technical know-how.
+        </p>
+      </div>
+      <div class="py-8 md:px-10 border-b md:border-b-0 md:border-r rule-dark">
+        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+          <rect x="13" y="6" width="14" height="20" rx="1" stroke="#C9362E" stroke-width="1.5" stroke-linejoin="round"/>
+          <rect x="7" y="10" width="14" height="20" rx="1" fill="#EEF0F2" stroke="#C9362E" stroke-width="1.5" stroke-linejoin="round"/>
+          <line x1="10" y1="16" x2="18" y2="16" stroke="#C9362E" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="10" y1="19" x2="18" y2="19" stroke="#C9362E" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="10" y1="22" x2="18" y2="22" stroke="#C9362E" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="10" y1="25" x2="15" y2="25" stroke="#C9362E" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <h3 class="mt-5 font-display text-navy-deep text-[21px] tracking-tight">Commercial portfolio</h3>
+        <p class="mt-3 text-[15px] leading-relaxed text-steel-600 max-w-[300px]">
+          A complementary product range that completes every project's requirements.
+        </p>
+      </div>
+      <div class="py-8 md:pl-10">
+        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+          <rect x="8" y="6" width="18" height="23" stroke="#C9362E" stroke-width="1.5" stroke-linejoin="round"/>
+          <line x1="8" y1="12" x2="26" y2="12" stroke="#C9362E" stroke-width="1.5"/>
+          <line x1="13" y1="15" x2="13" y2="25" stroke="#C9362E" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="13" y1="25" x2="23" y2="25" stroke="#C9362E" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M13,20 A5,5 0 0 1 18,25" stroke="#C9362E" stroke-width="1.5" fill="none"/>
+        </svg>
+        <h3 class="mt-5 font-display text-navy-deep text-[21px] tracking-tight">Technical support</h3>
+        <p class="mt-3 text-[15px] leading-relaxed text-steel-600 max-w-[300px]">
+          Guidance from specification through delivery, backed by real manufacturing expertise.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MANIFESTO -->
+<section class="bg-brandred">
+  <div class="max-w-[900px] mx-auto px-6 md:px-10 py-20 md:py-28 text-center">
+    <svg width="30" height="30" viewBox="0 0 30 30" class="mx-auto" aria-hidden="true">
+      <path d="M15 3L18 12L27 12L20 18L23 27L15 21L7 27L10 18L3 12L12 12Z" fill="#101F38"/>
+    </svg>
+    <p class="mt-7 font-display text-white text-[28px] sm:text-[36px] md:text-[42px] leading-[1.15] tracking-tight">
+      We arrived with one conviction: that things can be done right, and trust is earned by keeping that promise, year after year.
+    </p>
+    <p class="mt-6 text-[16px] text-white/80 max-w-[480px] mx-auto">
+      Backed by deep technical knowledge, we hold ourselves to the standard our clients expect — and aim to exceed it.
+    </p>
+  </div>
+</section>
+
+<!-- QUALITY -->
+<section id="quality" class="bg-steel-100">
+  <div class="max-w-[1400px] mx-auto px-6 md:px-10 py-20 md:py-28 grid lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-16">
+    <div>
+      <h2 class="font-display text-navy-deep text-[36px] sm:text-[44px] leading-[1.04] tracking-tight">
+        Certified to the highest standards.
+      </h2>
+      <p class="mt-6 text-[16px] leading-relaxed text-steel-600 max-w-[380px]">
+        Quality isn't a claim we make — it's a standard we're certified to meet, across every process and product line.
+      </p>
+    </div>
+    <dl class="border-t rule-dark">
+      <div class="grid grid-cols-[110px_1fr] sm:grid-cols-[140px_1fr] py-5 border-b rule-dark items-baseline">
+        <dt class="font-display text-navy text-[19px] tracking-tight">ISO 9001</dt>
+        <dd class="text-[15px] text-steel-600">Quality management systems</dd>
+      </div>
+      <div class="grid grid-cols-[110px_1fr] sm:grid-cols-[140px_1fr] py-5 border-b rule-dark items-baseline">
+        <dt class="font-display text-navy text-[19px] tracking-tight">ISO 14001</dt>
+        <dd class="text-[15px] text-steel-600">Environmental management</dd>
+      </div>
+      <div class="grid grid-cols-[110px_1fr] sm:grid-cols-[140px_1fr] py-5 border-b rule-dark items-baseline">
+        <dt class="font-display text-navy text-[19px] tracking-tight">ISO 45001</dt>
+        <dd class="text-[15px] text-steel-600">Occupational health &amp; safety</dd>
+      </div>
+      <div class="grid grid-cols-[110px_1fr] sm:grid-cols-[140px_1fr] py-5 items-baseline">
+        <dt class="font-display text-steel-300 text-[19px] tracking-tight">+ more</dt>
+        <dd class="text-[15px] text-steel-600">Additional certifications, confirmed per facility</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section id="industries" class="bg-white">
+  <div class="max-w-[1400px] mx-auto px-6 md:px-10 py-20 md:py-28">
+    <div class="flex flex-wrap items-end justify-between gap-6">
+      <h2 class="font-display text-navy-deep text-[36px] sm:text-[44px] leading-[1.04] tracking-tight max-w-[560px]">
+        Serving industry, in 5 countries.
+      </h2>
+      <p class="text-[16px] leading-relaxed text-steel-600 max-w-[340px]">
+        As a group, we supply technical wire solutions across a wide range of sectors — understanding what each one demands.
+      </p>
+    </div>
+
+    <div class="mt-14 grid sm:grid-cols-2 border-t rule-dark">
+      <div class="py-5 sm:pr-8 border-b rule-dark">
+        <span class="font-display text-navy-deep text-[21px] tracking-tight">Construction</span>
+      </div>
+      <div class="py-5 sm:pl-8 border-b rule-dark">
+        <span class="font-display text-navy-deep text-[21px] tracking-tight">Mining</span>
+      </div>
+      <div class="py-5 sm:pr-8 border-b rule-dark">
+        <span class="font-display text-navy-deep text-[21px] tracking-tight">Agriculture</span>
+      </div>
+      <div class="py-5 sm:pl-8 border-b rule-dark">
+        <span class="font-display text-navy-deep text-[21px] tracking-tight">Energy &amp; infrastructure</span>
+      </div>
+      <div class="py-5 sm:pr-8 border-b sm:border-b-0 rule-dark">
+        <span class="font-display text-navy-deep text-[21px] tracking-tight">Industrial manufacturing</span>
+      </div>
+      <div class="py-5 sm:pl-8">
+        <span class="font-display text-steel-300 text-[21px] tracking-tight">More, by request</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA / CONTACT FORM -->
+<section id="contact" class="bg-navy-deep">
+  <div class="max-w-[1400px] mx-auto px-6 md:px-10 py-20 md:py-28 grid lg:grid-cols-[0.85fr_1.15fr] gap-12 lg:gap-16">
+    <div>
+      <h2 class="font-display text-white text-[40px] sm:text-[50px] leading-[1.02] tracking-tight">
+        Let's build your next solution.
+      </h2>
+      <p class="mt-6 max-w-[380px] text-[16px] leading-relaxed text-steel-100/70">
+        Whether it's manufactured wire products or a full turn-key solution, our team is ready to bring 75+ years of expertise to your project.
+      </p>
+      <dl class="mt-10 max-w-[380px] border-t border-white/10">
+        <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-0 py-4 border-b border-white/10">
+          <dt class="text-[14px] text-steel-100/55">Phone</dt>
+          <dd class="text-[15px] text-white"><a href="tel:+14708546388" class="hover:text-brandred transition-colors">+1 (470) 854-6388</a></dd>
+        </div>
+        <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-0 py-4 border-b border-white/10">
+          <dt class="text-[14px] text-steel-100/55">Email</dt>
+          <dd class="text-[14px] sm:text-[15px] text-white break-all sm:break-normal"><a href="mailto:enrique.herrera@rangersteelsolutions.com" class="hover:text-brandred transition-colors">enrique.herrera@rangersteelsolutions.com</a></dd>
+        </div>
+      </dl>
+    </div>
+
+    <form class="bg-white rounded-sm p-7 sm:p-9" onsubmit="return false;">
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div>
+          <label for="rss-name" class="block text-[13px] font-medium text-steel-600 mb-1.5">Name</label>
+          <input id="rss-name" name="name" type="text" required autocomplete="name" placeholder="Jane Doe"
+            class="w-full rounded-sm border border-steel-300 bg-white px-4 py-3 text-[15px] text-navy-deep placeholder:text-steel-300 focus:outline-none focus:border-brandred focus:ring-1 focus:ring-brandred transition-colors">
+        </div>
+        <div>
+          <label for="rss-email" class="block text-[13px] font-medium text-steel-600 mb-1.5">Email</label>
+          <input id="rss-email" name="email" type="email" required autocomplete="email" placeholder="jane@company.com"
+            class="w-full rounded-sm border border-steel-300 bg-white px-4 py-3 text-[15px] text-navy-deep placeholder:text-steel-300 focus:outline-none focus:border-brandred focus:ring-1 focus:ring-brandred transition-colors">
+        </div>
+        <div class="sm:col-span-2">
+          <label for="rss-company" class="block text-[13px] font-medium text-steel-600 mb-1.5">Company</label>
+          <input id="rss-company" name="company" type="text" required autocomplete="organization" placeholder="Company name"
+            class="w-full rounded-sm border border-steel-300 bg-white px-4 py-3 text-[15px] text-navy-deep placeholder:text-steel-300 focus:outline-none focus:border-brandred focus:ring-1 focus:ring-brandred transition-colors">
+        </div>
+        <div class="sm:col-span-2">
+          <label for="rss-message" class="block text-[13px] font-medium text-steel-600 mb-1.5">Message</label>
+          <textarea id="rss-message" name="message" required rows="4" placeholder="Tell us about your project"
+            class="w-full rounded-sm border border-steel-300 bg-white px-4 py-3 text-[15px] text-navy-deep placeholder:text-steel-300 focus:outline-none focus:border-brandred focus:ring-1 focus:ring-brandred transition-colors resize-none"></textarea>
+        </div>
+      </div>
+      <button type="submit" class="mt-6 w-full sm:w-auto bg-brandred hover:bg-brandred-600 text-white text-[15px] font-medium px-7 py-3.5 rounded-sm transition-colors">
+        Send message
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-navy-deep border-t border-white/10">
+  <div class="max-w-[1400px] mx-auto px-6 md:px-10 py-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZ8AAAB+CAYAAAD7jRwHAAAh5UlEQVR4nO3deZgcVbn48e/pmUz2EKpCRQKRAOECIQuQZCYJi6ACAir6Y1FBuAIuCKJ4FWVTVvWCC1dZ1R8gKCiCCwhRUBaRkMwkIckkYc1lCXvBOSzZk5k+949T40wmk5nu6u6q6p738zz9MF1dfc4burtOnR1q3LymvSY8NnPKDmnHIYQQolN92gFUkHps5pQxqj1/nmq3DwP/P+2AhOgvtAm3Bxr6OK0NWOt7wdsJhCQypmYLnwVTp9a3t2+6D9TudVYtSjseIfqZPwGT+jjnFeAO4PzKhyOypmYLHwAFgyzU57Eq7VjSoE1YB1wKHJpQln/0veD7CeX1b9qEPwY+UGIybcCxvhe8VIZ4GoA/ANuXmNSTvhecWEB+OeBk4Msx83kdOMb3gvVx3qxNOBA4Hjijy+EJwOA+3roTcKo24WFdjl3ie8HdceKIYtkOuBMYGjeNCpjje8HXuh/UJjwUSOr38ibuM16TUH59qunCp4PC7j1/2oTG6QueaEk7loTVA7sAUxPKbxttwgnAe8C3fC9YXeH8lDbhFcBxwI4lprUJGFh6SADkgInAuBLTsQWeNyTKK+7nvBIXczGUNuFQ4JvA7sAewN5FptEAjI4eHc7VJjwOWOR7wY+LTA9gQBTHiBjvrZQ3tnLcI7nf5jrgRm3CTdHzv/hecHtCefeoJgufObMmB23tbacpy7YAKDUrr+qWAv2t8MkBSdb6xkeP1cDb2oTrcF/yJRXM82OUXvBk1fbahN8Crve94L1ezhsQPRKhTbgj8DlczeZEYGwZk58RPaZqE7YB9wAv+V6wsYx59EeDcTdpHcZqE7b7XnBnWgHVZOGjNtjRqo6LuxzaGdT41ALqf4YB50V/b69NeL3vBUvTDKgACpioTfim7wXvph1MZAfgO8BtuNpk6rQJd8Y1sV1a4az2AL4LbAc8pU34kO8Fr1Q4z/7kQGCQNmEe2Ag8nEBLxWaKrWpXLatU/ezx48vVrCIKdzpwljbh+9MOpA85XKy7pR1IVmkTjsbVdC5LKEsPNxjh18DR2oSjEsq3v2gEfg/8Cthfm3B4kpnXXOFjQdXV1W/x78rlrTdqaIPUftJxCnB1NACijArtEilIDjgEeF85E60V0aCGb8FmLQpJuhz3PRLlVQf4wN3AwUlmXHOFz/zpkw+ztN/V/bhVfJCG+rR+OMJ9sWeXqwDSJqzX5s3tqdGm4y4UMCoaQZem63Aj6tIykAT7tfqhepLtH669wscqO1y5IZzdDbNqs1E1IlnDgFnAn8rUBDcG11xQ6nDmrBsE/BQ3ei5NYyAawJMOBXxWm/C/UoyhlingfG3Co5PKsOYKH5Fpw3Cj08rRtjwU10w2pAxpZVkdrnPYTyNzbcKcNuHZwJ5p5N/NHsBJ2oSfTzuQGjUdODMa6l5xNVX4NDfuNcVadVAvp4ye1zT50w8dNG5QQiGJnh2lTdhT7TQLPqRNuFfaQWRIDvgisGvagUQm4AY9iMr4AHBEEhnVVOFjVf1RSnF6L6fspixX1b27baKjOsQWvgdMSzuIrTgLODztIHqwhzZhooMhtAmHAE24pr+sGEDt13bTtp02YcWbeWuq8BFVZUi0LEvRtAnrydbyKUn4GXBswnnuCjxK+SbxtpcpnTptwhHRCDxRfkeQwELM8uGJtPwUOC3me2cBPy9jLKLy1gMrcMsYlWoisBAZFl/VamaYanPj5POx9nMFnLpNw4D2Py6YOen0aXOXZn3Wfdqa6VypoMN/AieVIe1tcQMQ4hiJa/sX2XczcAuQx60vNhh30/tl4JiYaQ7AFTxlnjf2b38Cri5jerqMaXV1KvBCl+cNuDX+voeboJtpNVP44C5GOxdw3gAF+7e3q5EVjqcWaN8LHtzsgAlX4QqlHYFzU4nKXXSy1A+RlLHahGPLsfJ2Qm7ArUu3oPsL2oQfTSGeQr3U/XufUc2+FyzveBI1R3u4Wua3caMD4xoXrRZ/SaWWm5JmN1EU3wvm+15wLXAj8CDuix6Xymi7/X7ahB9MO4geHEDpW0cUJLqQ9bUlQl/+3lPBE3kUeKjE9EUXvhe0+V4Q+l7wK1zNrbWE5EbjalYVG9yRxR9+0RbMmNxki55saKfJ9toleQO4Eijlrmg3+t5wLA2fAD6TdhA96FjxOQmjgH0rlbjvBX8EUl3Sv5b5XnAN8M+04+hNTRQ++XauVUWvS6R+otryiYxnr0W+F6wC/oFrx4/rJNx+MAWLFj9MZcJlPzOB+ANCRDa8Ez0yqSYKH9GvfAm4Ku0ghKgC36PyW1/EJoWPqDYN9M/BBh2O1Sa8Ju0gRPb5XrAB2JB2HFtTsdFus8ePH+h7g75jrRqjlKrUkEgAbMztinNKndzcOHn/MoezhXyeP8xc0Bp7X3qRijHahFN9L1iYdiDdBLhtq4WoahUrfN7f0GDXwBvksFgOJ7m9yosxM3pUhFX8UlnerK/PZWIXSlGUvXArCmSt8BGiJlSs8Jn4xBMbidrm506ftDKncmeAnVKp/DJmNah/5PLtlzbOX1YtczIyL1prrNgmt3z032KbmHcCKl4rjmm4NuEE4GnfC8q1ZE0ansdN6IxjPaUNdql52oS7ALukHcfWJDLJdOb8pb9sbpy0BtR3LQzKwVhbo/1NFlbnFP+6t3nJ0Rd3XvhEzzZQ3DyhCRS/uvIruO9aLQ2r3wk4AzdSsGovwL4X3A/cn3YcNewo3LSBTEqsAGhqWXrbmDqzT11+wwm2in8wfckpHmxsbj1CCp6CPEtxE+HOBI4vMo8fAD8s8j1ZNxp3UZGdPUVvdibDNZ9Eax87zn15/aYBax4Hta9S1NS6akpxXnu73TPv7khrnjbhnsBiSqtR3Av8piwB9e4WQDYgEyJDEl3bTYFl7svr4OVn5s7Y+6t1+fYLrVIHJRlDZahzNm3M/W6/RYteTDuSJGgTHgBcTOmjrlb5XvB2GULqle8Fb2sTxul720Ob8GbgTN8LZNBI/3GkNuHYIs6/2feCuyoWTQzahBcCR5aQxLPAN4CK/T5TW1h05rzFDzc3Thlmlb1fWbUX2BPSiiWmF6y1N5FTm/I5frNfy6JX0g6oAnbXJvx+D8cnUPSKElXJx/2Ai1qFISEjgAu1Ca8E1qQdTI3ZleL6Fh+rVCB9OEub8M2tvPYZYk5BiRjfC+4BbAlp9CrVVa2bWpbcA9zT3DhxmrW54Urx8TTjKcIzwC3D1rT/MBrVV6t2pXIrV88Blvd5VkSb8MOU9mOqNcOA/8Ktj/ZsyrGIdFS6KbliBQ9kZEuFppZlC5obJ5+lFO+zll0sjFQZia0HK0Hd2NSy5PK0A6ly1wGzizj/XJJbVFOUWTRMfk9cP7MqQ5LtwFLfC2r55i8tbwFPVDqTzFzgm1pan7cwY+60SdflcuowYAxuKZWsWAPkreXyGfOXXJt2MFVuPbCmyAvHMIr/PrRT+6MOB5Gh33EvdsVtoTCU8gx0Wo1r/pV5dOV3r+8Fp1Q6k0zNtVFgGZA/r21T3X5KVX4P8SKst4oPW8WEYUPbbkk7mBpwCfB4AvksA15PIJ80/Yjq6H+rw91AZOqaI9KTuS/CrLnLzf6LFr1al6u/kkzMz1Ar6pQ6YvRgb/GM5taXJz78xOq0I6oBj5BMoXANrm8JYBFwMsUvtDgCuFObMMl9h34N/LjAcyfi9t6pBuVobhOVdQMJXXczW12fOvfxFXNnTLwpl697CfJDIHce2BEJhvAGeTvX1nH7tOZW2XGxPELcMu9PJtRWv8L3grcAfC94S5vwEVxTXDEGAAcCI8scW2+eo/DmpMHIZFNRHrcAv+y6NXclZbbwAZg5b9mTwJP3TZ48dJuB+ZFKqRNJZpmU+6y1j+Xa1ZymBa0PJJBff/ACcBNwte8FBffDaBMOxa1qMLrE/C3QVmIaSXoBt/TMoQWcuz+wTUWjEbVuLXAXCS6km+nCp8Nhra1rgHNbpk+aYZWqeOGjbP7GpvnLfl/pfPqRlcCtvhdcEuO9I3H9GknWetOWwy07dA2FFT7HVDYcUcPW4b5rrwAv+V6Q2A1aVRQ+oqq9g6vKX5Z2ICWq1ybMFVNrKyUvXN/UqwnkJfqvjbgh1ScBLyQ9bD1zAw5EzbkAV3OpdjsD26YdhBBltBC3hM6KNOZLVUXh89BB4wY17zv5bKvUuCTyyyv1vebGyacmkVc/sKFGJgJeAByUUF71ZGuOm6hNE4GzE6rNb6EqCp/B6+obqOdoSu90LohCjQd2TCKvfuBkbcJj47xRm7AON5qr2CG6G4AbgZd7ON5MvLXQdga8GO+Lo2MVgOeB06jg4o6iZM9SvXPJhpPilgtV0eczcMOw3MaG/E64C5FIznPAHdHfpwDbxUhjFvAobg2yYr0f+DLF1wI24ubKdO8zWQVci1sjbucY8STK9wKtTXgrrtYlTX7JWQj8o8BzXyS9rdZvwC2FcyAwM6UYYst84bNg6tQB6+z6UXXUJV1L231e06SpM5qXpvXFyoKnfC84B0Cb8HDiFT6l2AW3eGax2nFbTG9Ww/G9YC1uwui5ZLvwUVRJq0QR3sUN5e1qHDAl+VD6NKfje59xV/pesFyb8ARgILBvjDSGaxMeBTzge0GiE+gzX/jk8vmRubrcYbj/uUn6jLIKit85s1atxF2wh8d4r6dNOMb3gmofvTVKm9DzvcBUOJ96OieO5nETTn2quObve8HzdNvSWZvwS8D1qQRUQ3wvuFWbUOFq+8XaEfgzbtHXp8oZV18yf3eVH9i+i8qpq5BJdGk7Brgv5ntPxTV3Vbuv4/pgkrQe+DTpNe0IURGZr/m0WZSSNaFS53vBRm3CuKNiFMl+hsOA27QJt7aO2/iY6Xoku8wOvhfktQlfo/g16YTItEzXfB4aN25QblO8H7uFdmU5wyqOsdb+wroZvMXav6VpcgYWN80ES4U3l+pKm/BA4MyYb68DGnHLzvT0GFZCunUx31sMDwg6nvhesIna3xpClKbU3+f/aBNOL1cwhch04TPIHzHF5mxR+0ooWJa39jsovrNhoP3tjObWP9i8+rkif5lS/LLIEMZi+VCR7xE9Gxt1bBZaA9oN+GDMvBQwBLd3TE+PTH/vcX07Q9MOQlSVJZTWf3Yobg+1xGS72S1n90SpgueIWMtSlPrlzPmtV3U9PnNh6+PA482NU/7DYrdV8FHcJlyiOI/iNvCKs73ALrg5P3/xvaCQO7RBxBvcUAuGsOW//QHc0PPdkw9HZJ3vBcu0CW/ETU2II+mm8ezeAVqK6OuxrAGeUUpd29Sy5KqtndbUsuSZgRtzX1CKR3EduG8VEMeQ+dOm7LNswoR+P+Pc94KrgT/GfPs2uBE11d5/N1qbMG6fUaE8ug1r973gctwq10lpw610LERFZLbwWTh16mBl+2x6sArWWGxzm7VfaGpZ0me1c5/Fi99pbG49pKmldZq16nbchMTe7J7P2TmrRjQkWiUVmXUC8NO0g0jA27hFJ0X/MVCbMLG9oTJb+LTVb/oaOXVxH6e9ujHPVHL2+I1DV7UUm0e+vu27VqkrYoYoRC37X+KtSiHSY3E303EHHlwFfKF84fQus4VPnVXb0PtaWguVtce/unPrihnNy944+OEX1hebx6y5y41V6oY8XGCra6OxarUjMFubcKfeTtImPB04I5mQMmkUsH0Px38H3JZEAL4XrAPeLDGZhq3dSUcTTL9aYvpic8/i5uP12Z2wFduR4L5ZmS18tsZa/mAVXwd7WeP8pY8cd0fR2yJvZua8xS/k6+t+o7BfV5avKdXjHir1tLV/dcHUibuWkleN+Btuu904huBG1fQ11HkPXP9QfzWQnlczWBw9kmApfsvx7k4EDul+UJvw87g77Aklpi+68L3gPeBB3MTkzMvkaLfHpk/+SJ78Pt37ppXi7nwud/Xf5i1+5OIyznvY77FFLwJXA7RMnzRCKfU5C10LmnoUn2vP5e7BNUf0W74XzNMm3Bm3AZWojB5HHvlesFabsJoGARwCbNAmfH+346fhlvPPqknahOVcyWKl7wWzy5heJTVpEx7se8FDlc4ok4VPneI0UJ3bB1s2odR88urCmfMXL65k3o3zl17W3Di5DuyRoLbHNRWpnFLbKit7rJTJNG3CN3wviNs8kDZfm3AG0FKhvVC2VvOpRh+NHuW0Cjfsv1KrPhwcPcpldvRIygbczXmclq1P4BaBrXjhk/Vmt3VgX8fmVwzYlPtEY4ULng5NLa0X5/LqRMjfDOiO4/kcQ2ePH5/0Aqe16EbcMvBbiPoIklhFoBRNwK1U7uZtFPC+rby2luT292kD3qD05rdye9r3giN8LwjTDiSD8sAzQKIrVMeR9cLnzxsbmLC2rX7WXYsW6b5PL5/nd959RV37wO+3W3v0vw/mOd33hh6UZBw1qmOztJ7sC4xNMJZqcxtwckJ5PYObULwyofxEiXwvqJqFaDPV7GZBzZ8++TYLByjFtW25+isPePTxVHZxPO6OO9qBtUsmT16wbrD6YM5yK8pOJ9v7wCTl77gL4E0VSPtLuPXX4pgNfK+I8z9HgkNLy8H3gg3ahInc1fpe0K5N+DbZqvn8HaiGvXbSYn0vWKVNWMro3WnahGf6XrDVCfvlkKnCRwEt5FutyjXX5ewDs+Y+viLtmKa0tq6xxx77SMuLT33NqtzwXJ7mtGNKm+8Fb2kTLikxmR20CX3fC7rXaMcSf9fO0PeCxwo9WZtQ1u3rWx44F7ebahY2fgtJbsRffzUO+DBu3k/FZKrwAaxC3T5scFs48eEnMtNmqVwt6I4+TxTFOBI3L+GvaQcS01DgKG3C+30veDfhvN/C1QAOpsK/4WhAxZ3ahJ/FNcGl2VT/KHBvhQZ51JpW3FD2HWK8dygwurzhbClzfT7T5y99LksFj+hVKUu4H0q8bX+zYiTwTbpsfZCgF4HrSHaPn2YgzZaIhcDVvhf8NsUYqsmfcStdZ1bmCh9RNdbjLkabypGYNmFOm3AcbiJqUgzwesz3DsTtGZRkvAD4XvAOrjBIrC/G94If4Pr40hhhthI43/cCWe6nQL4XPEppcxIHaRPuok1YsZq1FD4iFt8LngKmQo8rQsQxBDe3YGaZ0ivEdbitsUVhfgh8N4V8P4FrZhTJmYy7wRlVqQyk8BFxWVytp5SmtzO1CX/Q5Xk98bdc+BlwYTFviPoOsjSSK9N8L+jo+zwOd1dd6f93K4G9gSelnydxChhABbdAkcJHpGk0bgWJcnjN94KXypRWNXgbN1Q80X4Y3wsMrhZyBm4+yVMVyGYd8DBwmu8FrdHcFVG8u4G70g5ia7I22k2U1ybKuAZeDyzu4uOTjV1HS6mFxXW6NuFVvhcsK2Oaz9HHXjrRqtN/0iZMfM5L1Od0H4A24TDcDqszgY+UmPTvcDWqVbjaTrWOhMyKFlzT2VEx369wfT+5StQ8pfCpYb4XtGkTziH+RXlxH6+3Ab8FnseN/opjXpe07qL3bTR6E3fjs5W4f0Ncw9my4G0H/kL89vJlFN7HcT+lL3aribmliO8FvwLQJjyCLZf92RO3fXr3ZfotsAh4utvxK4GlJdZ01gF3kq218RZv5fiLlPbd63WIv+8F72kTLiwhj3W4/YEq0vRW7VsaCyEySpvwJNxggXHdXsoDP/G9IJG9iYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCFE5ai0A6gUbcIccCgwrMvht3wveDhGWnVRWkMLOP1V3wseKyLtXYF9+jjNAvf7XrCqwDSH4OKt7+PUVt8LnikkzSjdJmBs9PQd3wv+Ueh7K0xpE04Edu92/J++F7wZN1FtQh84uIeXXvO9YE6M9AbhPpeG6NDTvhcsjRtfl3SnAztFT9/zveD+6PgsYEzHab4XPFREmjsCMwo8faHvBc8XmnaU/hRgt+jpetz3e2MxaUTpHACM7uGlB30vMDHS2wfYNXpqgTzwkO8F72gT7gnsFb2Wj2JeHSOPrr+jDnlgju8FbxSbXrXq6+JUdaJCZwgwHvgFm3/Ii7QJjwdW+F7QVkSyDcC1wLgCzr0bOKqItD8CXN3HORbYE3i6wDRHAbfi/j/05mzgRwWmCfB14FPR34uAfYt4b0VoE+4GDAbOAk7u9vIp2oR3xbwIbQscDvy6h5f/pU34ed8LnsV9NoXaBvgVsG30/Arg28XG1oOvACdFfz8JTIj+Phv4RPT3PGBmEWnOBH5f4Llfwv3WivGfuO8TwBu4mAv+nKLf+W7A5fT87/qMNuHffC94p8i4vgB8OfrbApui9B8HjgEuiV5rw/0mVxSTuDbheOAi3O++qzbgK9qEd/peoIuMuSptUfhYyFUoL6uK+6HGNQiYBdzXw2v7AP8CJuG+8EnEIypHAX9hyxpPhxuBM7QJr/e9IF9EujnchWZrF9QDgL9qE+4Z525dlMUw4O9sWYPo8FtcAXdLCXko3I1nOVuI7gSm9HC8Hrged8N4ZRnzK5bSJqxIi1j33+Bmhc+yCRMamofWXwHWL3fGFh6w85fenEABdBC934VtC8zRJvyU7wULKhyLSN+FgAdcVugbtAnPxNWkepMDRmoTat8L2uOHJ4qlTTgGOAMY0cepvjbhyBi1n34pqk0eBxxZgeRXaxN+2/eC9zoO1AO0TJ90IDn1jTWWnIJ9QA0sd8452LulcfL/m6eUzueGnD5r7tx15c4jMhTYocvzS4EFwCG45ok6YBdcU02hNuKq4x3NWB+hs2oO8C06m8ReLz7kzXwTeLbbMQu8UkKatwO39XB8eQlpZtGDwE9x34FrcDcaAa4Zshjb03lHvQo4Hej40RwFnBKl+2vc9+C5kqLOpjls3nx8ATA9+vtJ4Jwury1JKqiID5xAZx/sL4B7o7893Gc/BPg87nO7ocT8ztcmvLyUBLQJR0dx7Rwd+i3wu+jvAbhm/QA4VZtwg+8F15aSX4z4rgV2xPUdjunj9DjagJ20CTcB1/pecF/9/KaJh1irzrSWj1Ugw3+z7gIwEWtX17eteWde0+Qfz2hufbmSeUaafS+4V5swiJtAdGf778716M6rq0d9L5gbN/1u/uV7QUuZ0urwtO8Fd5c5zSxa6XvB3dqEI3Gd2HHVRQ9wNx73dQxciNrswV3cDgWGl5BPZvle8Cqu/xIAbcIvdHnZpPx9GkjnAAuAZR3xRL/Njv7cCXQOHijFh3GFRSmGAB/FxQ7uhuU+3ws2RANR1kbH9wIml5hXwaLr4jdwfblehbM7PPrvQG3CAfV5m9sPKlvwdKVgmFWclcvnbgOSKHwO1iZ8HngGuKnL8X4zqqQfGRbdYa7C1fa2iY6XuzAX/ctwOkcoxrUK1/90NO4ivy9uJOXfgHZcX1BHd0e5bmQL4eNabpJ0GLC85ka7ARpopfPu4Su49vmrfS84JbWoCjcxansFd4dZ8FDoXuyoTdgxbNYCS3wvKKVmkCVv42onDbjRiJ/ENbN+y/eCTSnGJWrLaEqoGfhe8BbwRW3Cxiidw4EB2oRvAC8B5/S3vsOcVWygs8pX9XwveBDXHrwJd6EdiBvSeZE24bDe3psRN+DufOYCPyhTmqd0SfNfbN4nVu3uB16N/p4GXIdrIt1Fm7AWb65EcvLAu7iayadxzaylWoW7NoFrzrsbVxt6nzbhgDKkXw3WAetz+Vz7z8nbC9KOpsxWAw/g/pEdjgZ+k044okIsbp7SE92ODwceARoTj0jUktdwzWPLgb2B/yhDmp8E/trl+fbAf+Nq6weUIf1q8H3gytx9c5e/Y+E5bCL9LwBv5ZQ9ckTDuqcqmMfruHbMw3GT68B1+B2kTfinqENa1IBo1YdzgA/iJhyCa2YNgGu0CT+eVmyi6rXjriWbcCPSSq5JR81v5wE3426e6oCRwPuAK7UJjyk1jyK9iPvtrEwov1dwgy1M/cWQ/5htX9Ru675tc2pkpXNWitWqreHvezQvrVh7fNSfsRRAm/Ay3JyND+M6oD8C/ESb8Pu+FxQ1OzkhV+C+EFC+Ibyz6RyKmgdiLzmTRR1L1GgTvoYreM6OXtob+IY24UDfC+5IKTwhNuN7wXJtwmuAZtyQ/nOjlyYDu2kTDva9oFJTUbrHshZ4SJvwHDpX3qikd4F5vhfk6wGmLXxiJT3PA6k60VDYI7ocuhs3vl4BH8KtgHAybuRbFgufP1RgqPWCpOcNJEWb8EQ6fzRP4OZLjAA+i5sHciBuKSApfERcv8OtqLC1lTT6pE3YgFvyqwnXLDzP94LrtAl3wN0Ufxb3vT0AN29qdqlBF8P3glKHkhetUkvppGkf3ETDjsdevhf8mc4JXaJ2KOB8Oj/rE3wveAHXDPdeL+8TomC+F/wI1ydTisG4IcaX4b6rn9Im9HwveAU3z6ZjXbvDgX7RVNwfRgON0iYcSzJVynIYHcXb3WtFLoba1TZbSfOdQlfK7kHDVtLc4HtBGDPNUg2NYhpB5yTRUuWAMdqEq3H9hiOj4+24Yd5xPxOAEVv5f/hu12VIijQgSnMjnRMaa43F/fsG4G5ARmoTergBRmPovKleH52XBXW4fsiOEW1TcH3Q9+P6ezquxWupodHHvekPhc/1uAtEtQxjvB13YevKAlPZctmdQn0ZOLWH4+cDP4uZ5p5sOcoM4FE6ZzIn7ZNR3oq+V/TujY0eClfYzME1i3wcOD46R+OG8Jey7NEpUbrdXQL8MGaau+A+lwW4z6gWrQOeAvbAze86HzcP56+430/HZ/8Yrsk1db4XvK1NeBFu3bTtgA/gfufbAv9D51JBf8MtllvzarHwmYcb6XZF9HxQt9ffAY4lI1/KHvS05pyltCbSBnqeoV3KrO0cm++V1KGYNfPKYR3uR1yH+z53j+m/cf1AxfgZsAG3npnCXRh+hLtQdNQm1uJWVY5bc4TyfS4X4aYXnE7n5zKdzlgtW97QVLPncAX3Pbhaw0Dc8jCHsfmeW38B/lmmPK/EfReO7+vErbDRUjodKzvX47Zq2J3Nv7OLgPmxo6witdjn8zru7udkoHvzzzPAF3FrsRW9CZTIHIu76/0GPV9kfgDc5HvBS8Uk6nvBy7ihsJd2ObwrnTPclwBf/9lPr8nEitbRRm7X4foSOgzFXeAW42pRl275zuoUjWZdglvZell0eBSuQ7/DRcDdZVzRejnlGX16AW6UG7iBB13XqPsRbsBRv7g21VzNJ1pSZaU24a9x6xZ1XRLjxTINuX0cN1GqQylNLwu7pbU1xWww9R7ugtNXU+O8Pl7v7s/A//ZxzgtFplkS3wtmR/O2XsI1j3V1g+8FsS4Yvhes0Ca8gZ77jp6JBrEUaw3uDrp7bby7ondJ9b1gmTbhL6I8unoamBttfFeKO3DLVkF55oR0nQS+ms0nhPcp6v/8Y/TZ97R46A3RTUSx7sP15YEbFrwpym+9NuGDdN6w57ucVzDfC+6JVlqZ1MPLN5dpOa2q8H9w4n5aHJU5TwAAAABJRU5ErkJggg==" alt="Ranger Steel Solutions" class="h-6 w-auto">
+    <p class="text-[13px] text-steel-100/50">© 2026 Ranger Steel Solutions</p>
+  </div>
+</footer>
+
+</body>
+</html>
