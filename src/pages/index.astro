@@ -1,0 +1,977 @@
+---
+import { Image, Picture } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import logo from "../assets/images/logo-white.svg";
+import presenceMap from "../assets/images/rss-map.png";
+---
+
+<Layout>
+  <!-- NAV -->
+  <nav
+    class="site-nav sticky z-50 bg-navy-deep/95 backdrop-blur-sm border-b border-white/10"
+  >
+    <div
+      class="max-w-350 mx-auto px-6 md:px-10 h-16 md:h-20 flex items-center justify-between"
+    >
+      <a href="#top" class="shrink-0 flex items-center">
+        <Image
+          src={logo}
+          alt="Ranger Steel Solutions"
+          class="h-7 md:h-8 w-auto"
+          loading="eager"
+        />
+      </a>
+      <div
+        class="hidden lg:flex items-center gap-9 text-[15px] text-steel-100/90"
+      >
+        <a href="#legacy" class="hover:text-white transition-colors"
+          >Legacy</a
+        >
+        <a href="#group" class="hover:text-white transition-colors"
+          >Our Group</a
+        >
+        <a href="#capabilities" class="hover:text-white transition-colors"
+          >Business Model</a
+        >
+        <a href="#quality" class="hover:text-white transition-colors"
+          >Quality</a
+        >
+        <a href="#solutions" class="hover:text-white transition-colors"
+          >Solutions</a
+        >
+        <a href="#industries" class="hover:text-white transition-colors"
+          >Industries</a
+        >
+      </div>
+      <a
+        href="#contact"
+        class="shrink-0 bg-brandred hover:bg-brandred-600 text-white text-[15px] font-medium px-5 py-2.5 rounded-xs transition-colors"
+      >
+        Talk to our team
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="top" class="relative bg-navy-deep overflow-hidden">
+    <div
+      class="max-w-225 mx-auto px-6 md:px-10 pt-16 md:pt-24 pb-14 md:pb-20 text-center"
+    >
+      <div class="reveal reveal-1">
+        <h1
+          class="text-white text-[42px] leading-[1.05] sm:text-[58px] sm:leading-[1.02] lg:text-[68px] lg:leading-none tracking-tight font-semibold"
+        >
+          Seventy-five years of wire manufacturing, backed by a world-class
+          standard.
+        </h1>
+        <p
+          class="mt-7 max-w-155 mx-auto text-[17px] md:text-[18px] leading-relaxed text-steel-100/80"
+        >
+          We are Ranger — a technical, reliable supplier with world-class
+          standards. Backed by Inchalam and part of a group of companies with
+          presence across South America, we have the scale and continuity to
+          support our clients over time.
+        </p>
+        <div
+          class="mt-9 flex flex-wrap items-center justify-center gap-x-8 gap-y-4"
+        >
+          <a
+            href="#contact"
+            class="bg-brandred hover:bg-brandred-600 text-white text-[15px] font-medium px-6 py-3.5 rounded-xs transition-colors"
+          >
+            Talk to our team
+          </a>
+          <a
+            href="#capabilities"
+            class="text-[15px] font-medium text-steel-100 hover:text-white underline underline-offset-4 decoration-white/30 hover:decoration-white transition-colors"
+          >
+            See our capabilities
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Spec / stat row -->
+    <div class="reveal reveal-3 border-t border-white/10">
+      <div
+        class="max-w-350 mx-auto px-6 md:px-10 grid grid-cols-2 md:grid-cols-4"
+      >
+        <div class="pt-6 pb-6 md:pt-8 md:pb-8 pr-4 md:pr-6">
+          <div
+            class="text-white text-[26px] sm:text-[32px] md:text-[36px] leading-[1.05] tabular"
+          >
+            75+
+          </div>
+          <div class="mt-2 text-[13px] md:text-[14px] text-steel-100/65">
+            Years of history
+          </div>
+        </div>
+        <div
+          class="pt-6 pb-6 md:pt-8 md:pb-8 pl-4 md:pl-6 border-l border-white/10"
+        >
+          <div
+            class="text-white text-[26px] sm:text-[32px] md:text-[36px] leading-[1.05] tabular"
+          >
+            +2,200
+          </div>
+          <div class="mt-2 text-[13px] md:text-[14px] text-steel-100/65">
+            Total staff
+          </div>
+        </div>
+        <div
+          class="pt-8 pb-6 md:pt-8 md:pb-8 pr-4 md:pr-0 md:pl-6 border-t md:border-t-0 md:border-l border-white/10"
+        >
+          <div
+            class="text-white text-[26px] sm:text-[32px] md:text-[36px] leading-[1.05] tabular"
+          >
+            ~360,000
+          </div>
+          <div class="mt-2 text-[13px] md:text-[14px] text-steel-100/65">
+            Tons/year production capacity
+          </div>
+        </div>
+        <div
+          class="pt-8 pb-6 md:pt-8 md:pb-8 pl-4 md:pl-6 border-t md:border-t-0 border-l border-white/10"
+        >
+          <div
+            class="text-white text-[26px] sm:text-[32px] md:text-[36px] leading-[1.05]"
+          >
+            ISO Certified
+          </div>
+          <div class="mt-2 text-[13px] md:text-[14px] text-steel-100/65">
+            50001 / 45001 / 14001 / 9001
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- LEGACY -->
+  <section id="legacy" class="bg-steel-100">
+    <div
+      class="max-w-350 mx-auto px-6 md:px-10 py-20 md:py-28 grid lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-16"
+    >
+      <h2
+        class="text-navy-deep text-[36px] sm:text-[44px] leading-[1.04] tracking-tight font-semibold"
+      >
+        Shaped by a world-class standard.
+      </h2>
+      <div class="max-w-140">
+        <p class="text-[17px] leading-relaxed text-steel-600">
+          We were part of Bekaert, a global leader in wire solutions. That
+          journey allowed the group to adopt their quality standards,
+          processes, and operational discipline.
+        </p>
+        <p class="mt-5 text-[17px] leading-relaxed text-steel-600">
+          Today we follow our own path as Ranger, with the support of Inchalam
+          and the experience of having operated under the standards of a
+          world-class company.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GROUP -->
+  <section id="group" class="bg-navy">
+    <div
+      class="max-w-350 mx-auto px-6 md:px-10 pt-20 md:pt-28 grid lg:grid-cols-[1fr_0.9fr] gap-12 lg:gap-16 items-center"
+    >
+      <div>
+        <h2
+          class="text-white text-[36px] sm:text-[44px] leading-[1.04] tracking-tight max-w-130 font-semibold"
+        >
+          Backed by Inchalam, across South America.
+        </h2>
+        <p
+          class="mt-6 max-w-130 text-[17px] leading-relaxed text-white/75"
+        >
+          Ranger Steel Solutions is backed by Inchalam and part of a group of
+          companies with an established presence across South America. That
+          backing gives us the scale and continuity to support our clients
+          over time.
+        </p>
+      </div>
+      <div class="hidden lg:flex justify-center lg:justify-end">
+        <Picture
+          src={presenceMap}
+          formats={["avif", "webp"]}
+          widths={[480, 540, 960, 1080]}
+          width={1080}
+          sizes="(min-width: 1280px) 540px, 480px"
+          alt="Map showing Ranger Steel Solutions presence in the USA, Peru and Chile, with export routes reaching other regions"
+          class="w-full max-w-120 xl:max-w-135 h-auto"
+        />
+      </div>
+    </div>
+    <div class="mt-16 md:mt-20 border-t border-white/10">
+      <div
+        class="max-w-350 mx-auto px-6 md:px-10 py-10 md:py-12 grid lg:grid-cols-[0.9fr_1.1fr] gap-4 lg:gap-16 lg:items-baseline"
+      >
+        <h3
+          class="text-white text-[22px] sm:text-[26px] tracking-tight font-semibold"
+        >
+          Local presence in the U.S.
+        </h3>
+        <p class="text-[16px] leading-relaxed text-white/70 max-w-140">
+          We opened offices in the U.S. to be closer to our customers, support
+          them, and solve their needs as a local supplier.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPABILITIES / TURN-KEY -->
+  <section id="capabilities" class="bg-steel-100">
+    <div class="max-w-350 mx-auto px-6 md:px-10 py-20 md:py-28">
+      <h2
+        class="text-navy-deep text-[36px] sm:text-[44px] leading-[1.04] tracking-tight max-w-160 font-semibold"
+      >
+        We manufacture and market, under a turn-key model.
+      </h2>
+      <p
+        class="mt-6 max-w-160 text-[17px] leading-relaxed text-steel-600"
+      >
+        We design, produce, and deliver the wire solution your business needs
+        — available under private label or the Ranger brand.
+      </p>
+      <a
+        href="#"
+        class="mt-7 inline-flex items-center gap-2 bg-brandred hover:bg-brandred-600 text-white text-[15px] font-medium px-6 py-3.5 rounded-xs transition-colors"
+      >
+        View catalog
+        <svg
+          width="19"
+          height="19"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          stroke-width="1.5"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+          />
+        </svg>
+      </a>
+
+      <div class="mt-14 grid md:grid-cols-3 border-t rule-dark">
+        <div
+          class="py-8 md:pr-10 border-b md:border-b-0 md:border-r rule-dark"
+        >
+          <svg
+            width="34"
+            height="34"
+            viewBox="0 0 34 34"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M9,19 H25 A4,4 0 0 1 25,27 H9 A4,4 0 0 1 9,19 Z"
+              stroke="#C9362E"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <line
+              x1="9"
+              y1="23"
+              x2="25"
+              y2="23"
+              stroke="#C9362E"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <rect
+              x="12"
+              y="12"
+              width="6"
+              height="7"
+              stroke="#C9362E"
+              stroke-width="1.5"
+              stroke-linejoin="round"
+            />
+            <rect
+              x="20"
+              y="9"
+              width="7"
+              height="10"
+              stroke="#C9362E"
+              stroke-width="1.5"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <h3
+            class="mt-5 text-navy-deep text-[21px] tracking-tight font-semibold"
+          >
+            Manufactured products
+          </h3>
+          <p
+            class="mt-3 text-[15px] leading-relaxed text-steel-600 max-w-75"
+          >
+            Wire solutions engineered and produced with decades of technical
+            know-how, available under private label or the Ranger brand.
+          </p>
+        </div>
+        <div
+          class="py-8 md:px-10 border-b md:border-b-0 md:border-r rule-dark"
+        >
+          <svg
+            width="34"
+            height="34"
+            viewBox="0 0 34 34"
+            fill="none"
+            aria-hidden="true"
+          >
+            <rect
+              x="13"
+              y="6"
+              width="14"
+              height="20"
+              rx="1"
+              stroke="#C9362E"
+              stroke-width="1.5"
+              stroke-linejoin="round"
+            />
+            <rect
+              x="7"
+              y="10"
+              width="14"
+              height="20"
+              rx="1"
+              fill="#EEF0F2"
+              stroke="#C9362E"
+              stroke-width="1.5"
+              stroke-linejoin="round"
+            />
+            <line
+              x1="10"
+              y1="16"
+              x2="18"
+              y2="16"
+              stroke="#C9362E"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <line
+              x1="10"
+              y1="19"
+              x2="18"
+              y2="19"
+              stroke="#C9362E"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <line
+              x1="10"
+              y1="22"
+              x2="18"
+              y2="22"
+              stroke="#C9362E"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <line
+              x1="10"
+              y1="25"
+              x2="15"
+              y2="25"
+              stroke="#C9362E"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+          </svg>
+          <h3
+            class="mt-5 text-navy-deep text-[21px] tracking-tight font-semibold"
+          >
+            Commercial portfolio
+          </h3>
+          <p
+            class="mt-3 text-[15px] leading-relaxed text-steel-600 max-w-75"
+          >
+            A complementary product range that covers the full solution chain
+            for every project.
+          </p>
+        </div>
+        <div class="py-8 md:pl-10">
+          <svg
+            width="34"
+            height="34"
+            viewBox="0 0 34 34"
+            fill="none"
+            aria-hidden="true"
+          >
+            <rect
+              x="8"
+              y="6"
+              width="18"
+              height="23"
+              stroke="#C9362E"
+              stroke-width="1.5"
+              stroke-linejoin="round"
+            />
+            <line
+              x1="8"
+              y1="12"
+              x2="26"
+              y2="12"
+              stroke="#C9362E"
+              stroke-width="1.5"
+            />
+            <line
+              x1="13"
+              y1="15"
+              x2="13"
+              y2="25"
+              stroke="#C9362E"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <line
+              x1="13"
+              y1="25"
+              x2="23"
+              y2="25"
+              stroke="#C9362E"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <path
+              d="M13,20 A5,5 0 0 1 18,25"
+              stroke="#C9362E"
+              stroke-width="1.5"
+              fill="none"
+            />
+          </svg>
+          <h3
+            class="mt-5 text-navy-deep text-[21px] tracking-tight font-semibold"
+          >
+            Technical support
+          </h3>
+          <p
+            class="mt-3 text-[15px] leading-relaxed text-steel-600 max-w-75"
+          >
+            Guidance from specification through delivery, backed by real
+            manufacturing expertise.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPORT CTA -->
+  <section class="bg-brandred">
+    <div
+      class="max-w-190 mx-auto px-6 md:px-10 py-20 md:py-28 text-center"
+    >
+      <h3
+        class="text-white text-[34px] sm:text-[44px] md:text-[50px] leading-[1.05] tracking-tight font-semibold"
+      >
+        Exporting to more than 30 countries.
+      </h3>
+      <p
+        class="mt-4 text-[17px] md:text-[18px] text-white/80 max-w-120 mx-auto"
+      >
+        Serving diverse industries with technical solutions, wherever your
+        business operates.
+      </p>
+      <a
+        href="#contact"
+        class="mt-9 inline-block bg-white hover:bg-steel-100 text-navy-deep text-[15px] font-medium px-8 py-3.5 rounded-xs transition-colors"
+      >
+        Talk to our team
+      </a>
+    </div>
+  </section>
+
+  <!-- WHAT SETS US APART -->
+  <section id="apart" class="bg-navy-deep">
+    <div class="max-w-350 mx-auto px-6 md:px-10 py-20 md:py-28">
+      <h2
+        class="text-white text-[36px] sm:text-[44px] leading-[1.04] tracking-tight max-w-160 font-semibold"
+      >
+        What sets us apart.
+      </h2>
+      <div
+        class="mt-14 grid md:grid-cols-2 md:gap-x-16 border-t border-white/10"
+      >
+        <div class="flex gap-5 py-6 border-b border-white/10">
+          <span
+            class="text-brandred text-[22px] leading-none shrink-0 w-8"
+            >01</span
+          >
+          <p class="text-[16px] leading-relaxed text-white/80">
+            Over 75 years of experience manufacturing wire solutions.
+          </p>
+        </div>
+        <div class="flex gap-5 py-6 border-b border-white/10">
+          <span
+            class="text-brandred text-[22px] leading-none shrink-0 w-8"
+            >02</span
+          >
+          <p class="text-[16px] leading-relaxed text-white/80">
+            Certified processes under high standards: ISO 9001, ISO 14001, ISO
+            45001, and ISO 50001.
+          </p>
+        </div>
+        <div class="flex gap-5 py-6 border-b border-white/10">
+          <span
+            class="text-brandred text-[22px] leading-none shrink-0 w-8"
+            >03</span
+          >
+          <p class="text-[16px] leading-relaxed text-white/80">
+            Turn-key model — we manufacture and market, covering the entire
+            solution chain.
+          </p>
+        </div>
+        <div class="flex gap-5 py-6 border-b border-white/10">
+          <span
+            class="text-brandred text-[22px] leading-none shrink-0 w-8"
+            >04</span
+          >
+          <p class="text-[16px] leading-relaxed text-white/80">
+            Backed by Inchalam, which operated under the standards of Bekaert,
+            a global industry benchmark.
+          </p>
+        </div>
+        <div class="flex gap-5 py-6 border-b border-white/10 md:border-b-0">
+          <span
+            class="text-brandred text-[22px] leading-none shrink-0 w-8"
+            >05</span
+          >
+          <p class="text-[16px] leading-relaxed text-white/80">
+            Part of a group of companies with operations across South America.
+          </p>
+        </div>
+        <div class="flex gap-5 py-6 border-b border-white/10 md:border-b-0">
+          <span
+            class="text-brandred text-[22px] leading-none shrink-0 w-8"
+            >06</span
+          >
+          <p class="text-[16px] leading-relaxed text-white/80">
+            Offices in the U.S. — a local supplier, close to our customers.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUALITY -->
+  <section id="quality" class="bg-steel-100">
+    <div
+      class="max-w-350 mx-auto px-6 md:px-10 py-20 md:py-28 grid lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-16"
+    >
+      <div>
+        <h2
+          class="text-navy-deep text-[36px] sm:text-[44px] leading-[1.04] tracking-tight font-semibold"
+        >
+          Certified to the highest standards.
+        </h2>
+        <p
+          class="mt-6 text-[16px] leading-relaxed text-steel-600 max-w-95"
+        >
+          Quality isn't a claim we make — it's a standard we're certified to
+          meet, across every process and product line.
+        </p>
+      </div>
+      <dl class="border-t rule-dark">
+        <div
+          class="grid grid-cols-[110px_1fr] sm:grid-cols-[140px_1fr] py-5 border-b rule-dark items-baseline"
+        >
+          <dt class="text-navy text-[19px] tracking-tight">
+            ISO 9001
+          </dt>
+          <dd class="text-[15px] text-steel-600">
+            Quality management systems
+          </dd>
+        </div>
+        <div
+          class="grid grid-cols-[110px_1fr] sm:grid-cols-[140px_1fr] py-5 border-b rule-dark items-baseline"
+        >
+          <dt class="text-navy text-[19px] tracking-tight">
+            ISO 14001
+          </dt>
+          <dd class="text-[15px] text-steel-600">Environmental management</dd>
+        </div>
+        <div
+          class="grid grid-cols-[110px_1fr] sm:grid-cols-[140px_1fr] py-5 border-b rule-dark items-baseline"
+        >
+          <dt class="text-navy text-[19px] tracking-tight">
+            ISO 45001
+          </dt>
+          <dd class="text-[15px] text-steel-600">
+            Occupational health &amp; safety
+          </dd>
+        </div>
+        <div
+          class="grid grid-cols-[110px_1fr] sm:grid-cols-[140px_1fr] py-5 items-baseline"
+        >
+          <dt class="text-navy text-[19px] tracking-tight">
+            ISO 50001
+          </dt>
+          <dd class="text-[15px] text-steel-600">
+            Energy management systems
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- SOLUTIONS -->
+  <section id="solutions" class="bg-navy">
+    <div
+      class="max-w-350 mx-auto px-6 md:px-10 py-20 md:py-28 grid lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-16"
+    >
+      <h2
+        class="text-white text-[36px] sm:text-[44px] leading-[1.04] tracking-tight font-semibold"
+      >
+        Our solutions.
+      </h2>
+      <div class="max-w-140">
+        <p class="text-[17px] leading-relaxed text-white/75">
+          Semi-finished and finished wire products, and their derivatives,
+          developed according to the technical specifications of each industry
+          we serve.
+        </p>
+        <p class="mt-5 text-[17px] leading-relaxed text-white/75">
+          All our products are available in low carbon and high carbon steel
+          wire.
+        </p>
+        <a
+          href="#"
+          class="mt-7 inline-flex items-center gap-2 bg-brandred hover:bg-brandred-600 text-white text-[15px] font-medium px-6 py-3.5 rounded-xs transition-colors"
+        >
+          View catalog
+          <svg
+            width="19"
+            height="19"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            stroke-width="1.5"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES -->
+  <section id="industries" class="bg-white">
+    <div class="max-w-350 mx-auto px-6 md:px-10 py-20 md:py-28">
+      <div class="flex flex-wrap items-end justify-between gap-6">
+        <h2
+          class="text-navy-deep text-[36px] sm:text-[44px] leading-[1.04] tracking-tight max-w-140 font-semibold"
+        >
+          Industries we serve.
+        </h2>
+        <p class="text-[16px] leading-relaxed text-steel-600 max-w-85">
+          Technical wire solutions developed for the specific demands of each
+          sector.
+        </p>
+      </div>
+
+      <div class="mt-14 grid sm:grid-cols-2 border-t rule-dark">
+        <div class="py-5 sm:pr-8 border-b rule-dark">
+          <span class="text-navy-deep text-[21px] tracking-tight"
+            >Agriculture</span
+          >
+        </div>
+        <div class="py-5 sm:pl-8 border-b rule-dark">
+          <span class="text-navy-deep text-[21px] tracking-tight"
+            >Construction</span
+          >
+        </div>
+        <div class="py-5 sm:pr-8 border-b rule-dark">
+          <span class="text-navy-deep text-[21px] tracking-tight"
+            >Aquaculture</span
+          >
+        </div>
+        <div class="py-5 sm:pl-8 border-b rule-dark">
+          <span class="text-navy-deep text-[21px] tracking-tight"
+            >Mining</span
+          >
+        </div>
+        <div class="py-5 sm:pr-8 border-b rule-dark">
+          <span class="text-navy-deep text-[21px] tracking-tight"
+            >Forestry and pulp</span
+          >
+        </div>
+        <div class="py-5 sm:pl-8 border-b rule-dark">
+          <span class="text-navy-deep text-[21px] tracking-tight"
+            >Recycling</span
+          >
+        </div>
+        <div class="py-5 sm:pr-8 border-b rule-dark">
+          <span class="text-navy-deep text-[21px] tracking-tight"
+            >Industrial</span
+          >
+        </div>
+        <div class="py-5 sm:pl-8 border-b rule-dark">
+          <span class="text-navy-deep text-[21px] tracking-tight"
+            >Distribution</span
+          >
+        </div>
+        <div class="py-5 sm:pr-8 border-b sm:border-b-0 rule-dark">
+          <span class="text-navy-deep text-[21px] tracking-tight"
+            >Mattress</span
+          >
+        </div>
+        <div class="py-5 sm:pl-8">
+          <span class="text-navy-deep text-[21px] tracking-tight"
+            >Fencing</span
+          >
+        </div>
+      </div>
+
+      <div
+        class="mt-16 pt-10 border-t rule-dark grid lg:grid-cols-[0.9fr_1.1fr] gap-4 lg:gap-16 lg:items-baseline"
+      >
+        <h3
+          class="text-navy-deep text-[22px] sm:text-[26px] tracking-tight font-semibold"
+        >
+          Who we serve
+        </h3>
+        <p class="text-[16px] leading-relaxed text-steel-600 max-w-140">
+          Retailers in Latin America and the U.S., wholesalers, and
+          distributors.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA / CONTACT FORM -->
+  <section id="contact" class="bg-navy-deep">
+    <div
+      class="max-w-350 mx-auto px-6 md:px-10 py-20 md:py-28 grid lg:grid-cols-[0.85fr_1.15fr] gap-12 lg:gap-16"
+    >
+      <div>
+        <h2
+          class="text-white text-[40px] sm:text-[50px] leading-[1.02] tracking-tight font-semibold"
+        >
+          Let's build your next solution.
+        </h2>
+        <p
+          class="mt-6 max-w-95 text-[16px] leading-relaxed text-steel-100/70"
+        >
+          Whether it's manufactured wire products or a full turn-key solution,
+          our team is ready to bring 75+ years of expertise to your project.
+        </p>
+        <dl class="mt-10 max-w-95 border-t border-white/10">
+          <div
+            class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-0 py-4 border-b border-white/10"
+          >
+            <dt class="text-[14px] text-steel-100/55">Phone</dt>
+            <dd class="text-[15px] text-white">
+              <a
+                href="tel:+14708546388"
+                class="hover:text-brandred transition-colors"
+                >+1 (470) 854-6388</a
+              >
+            </dd>
+          </div>
+          <div
+            class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-0 py-4 border-b border-white/10"
+          >
+            <dt class="text-[14px] text-steel-100/55">Email</dt>
+            <dd
+              class="text-[14px] sm:text-[15px] text-white break-all sm:break-normal"
+            >
+              <a
+                href="mailto:enrique.herrera@rangersteelsolutions.com"
+                class="hover:text-brandred transition-colors"
+                >enrique.herrera@rangersteelsolutions.com</a
+              >
+            </dd>
+          </div>
+        </dl>
+      </div>
+
+      <form class="bg-white rounded-xs p-7 sm:p-9" onsubmit="return false;">
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label
+              for="rss-name"
+              class="block text-[13px] font-medium text-steel-600 mb-1.5"
+              >Name</label
+            >
+            <input
+              id="rss-name"
+              name="name"
+              type="text"
+              required
+              autocomplete="name"
+              placeholder="Jane Doe"
+              class="w-full rounded-xs border border-steel-300 bg-white px-4 py-3 text-[15px] text-navy-deep placeholder:text-steel-300 focus:outline-hidden focus:border-brandred focus:ring-1 focus:ring-brandred transition-colors"
+            />
+          </div>
+          <div>
+            <label
+              for="rss-email"
+              class="block text-[13px] font-medium text-steel-600 mb-1.5"
+              >Email</label
+            >
+            <input
+              id="rss-email"
+              name="email"
+              type="email"
+              required
+              autocomplete="email"
+              placeholder="jane@company.com"
+              class="w-full rounded-xs border border-steel-300 bg-white px-4 py-3 text-[15px] text-navy-deep placeholder:text-steel-300 focus:outline-hidden focus:border-brandred focus:ring-1 focus:ring-brandred transition-colors"
+            />
+          </div>
+          <div class="sm:col-span-2">
+            <label
+              for="rss-company"
+              class="block text-[13px] font-medium text-steel-600 mb-1.5"
+              >Company</label
+            >
+            <input
+              id="rss-company"
+              name="company"
+              type="text"
+              required
+              autocomplete="organization"
+              placeholder="Company name"
+              class="w-full rounded-xs border border-steel-300 bg-white px-4 py-3 text-[15px] text-navy-deep placeholder:text-steel-300 focus:outline-hidden focus:border-brandred focus:ring-1 focus:ring-brandred transition-colors"
+            />
+          </div>
+          <div class="sm:col-span-2">
+            <label
+              for="rss-message"
+              class="block text-[13px] font-medium text-steel-600 mb-1.5"
+              >Message</label
+            >
+            <textarea
+              id="rss-message"
+              name="message"
+              required
+              rows="4"
+              placeholder="Tell us about your project"
+              class="w-full rounded-xs border border-steel-300 bg-white px-4 py-3 text-[15px] text-navy-deep placeholder:text-steel-300 focus:outline-hidden focus:border-brandred focus:ring-1 focus:ring-brandred transition-colors resize-none"
+            ></textarea>
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="mt-6 w-full sm:w-auto bg-brandred hover:bg-brandred-600 text-white text-[15px] font-medium px-7 py-3.5 rounded-xs transition-colors"
+        >
+          Send message
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-navy-deep border-t border-white/10">
+    <div class="max-w-350 mx-auto px-6 md:px-10 py-16 md:py-20">
+      <div
+        class="grid sm:grid-cols-2 lg:grid-cols-[1.1fr_0.9fr_0.9fr_0.9fr] gap-10 lg:gap-8"
+      >
+        <div>
+          <Image
+            src={logo}
+            alt="Ranger Steel Solutions"
+            class="h-9 w-auto"
+          />
+          <p
+            class="mt-5 text-[14px] leading-relaxed text-steel-100/50 max-w-65"
+          >
+            75+ years manufacturing wire solutions, backed by a world-class
+            standard.
+          </p>
+        </div>
+
+        <div>
+          <span class="text-[13px] text-steel-100/45">Part of the group</span>
+          <div class="mt-4 flex flex-col gap-2.5">
+            <a
+              href="https://inchalam.cl/home_e/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-[14px] text-steel-100/75 hover:text-brandred transition-colors w-fit"
+              >Inchalam</a
+            >
+            <a
+              href="https://www.acmanet.cl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-[14px] text-steel-100/75 hover:text-brandred transition-colors w-fit"
+              >Acmanet</a
+            >
+            <a
+              href="https://prodimin.pe/en/home-english/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-[14px] text-steel-100/75 hover:text-brandred transition-colors w-fit"
+              >Prodimin</a
+            >
+            <a
+              href="https://www.prodalam.cl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-[14px] text-steel-100/75 hover:text-brandred transition-colors w-fit"
+              >Prodalam</a
+            >
+          </div>
+        </div>
+
+        <div>
+          <span class="text-[13px] text-steel-100/45">Navigate</span>
+          <div class="mt-4 flex flex-col gap-2.5">
+            <a
+              href="#legacy"
+              class="text-[14px] text-steel-100/75 hover:text-brandred transition-colors w-fit"
+              >Legacy</a
+            >
+            <a
+              href="#capabilities"
+              class="text-[14px] text-steel-100/75 hover:text-brandred transition-colors w-fit"
+              >Business Model</a
+            >
+            <a
+              href="#quality"
+              class="text-[14px] text-steel-100/75 hover:text-brandred transition-colors w-fit"
+              >Quality</a
+            >
+            <a
+              href="#industries"
+              class="text-[14px] text-steel-100/75 hover:text-brandred transition-colors w-fit"
+              >Industries</a
+            >
+          </div>
+        </div>
+
+        <div>
+          <span class="text-[13px] text-steel-100/45">Contact</span>
+          <div class="mt-4 flex flex-col gap-2.5">
+            <a
+              href="tel:+14708546388"
+              class="text-[14px] text-steel-100/75 hover:text-brandred transition-colors w-fit"
+              >+1 (470) 854-6388</a
+            >
+            <a
+              href="mailto:enrique.herrera@rangersteelsolutions.com"
+              class="text-[14px] text-steel-100/75 hover:text-brandred transition-colors w-fit break-all"
+              >enrique.herrera@rangersteelsolutions.com</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-14 md:mt-16 pt-8 border-t border-white/10">
+        <p class="text-[13px] text-steel-100/45">
+          © 2026 Ranger Steel Solutions
+        </p>
+      </div>
+    </div>
+  </footer>
+</Layout>

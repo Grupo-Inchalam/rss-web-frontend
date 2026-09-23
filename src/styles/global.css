@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-deep: #101f38;
+  --color-navy: #1b3864;
+  --color-navy-700: #254a7e;
+
+  --color-brandred: #c9362e;
+  --color-brandred-600: #ac2c25;
+  --color-brandred-100: #f7e2e0;
+
+  --color-steel-100: #eef0f2;
+  --color-steel-300: #9aa3ae;
+  --color-steel-600: #40495a;
+
+  /* Font stack comes from Astro's Fonts API (astro.config.mjs). */
+  --font-sans: var(--font-plus-jakarta-sans);
+}
+
+@layer base {
+  :root {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  html {
+    scroll-padding-top: env(safe-area-inset-top, 0px);
+    scroll-behavior: smooth;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  body {
+    background: var(--color-navy-deep);
+    overflow-x: hidden;
+  }
+
+  /* Tailwind v4 dropped the pointer cursor on buttons; keep v3 behavior. */
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--color-brandred);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+
+  nav.site-nav {
+    top: env(safe-area-inset-top, 0px);
+  }
+
+  .rule {
+    border-color: rgba(255, 255, 255, 0.14);
+  }
+  .rule-dark {
+    border-color: rgba(16, 31, 56, 0.14);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      opacity: 0;
+      transform: translateY(14px);
+      animation: revealUp 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+    }
+    .reveal-1 {
+      animation-delay: 0.05s;
+    }
+    .reveal-2 {
+      animation-delay: 0.22s;
+    }
+    .reveal-3 {
+      animation-delay: 0.38s;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+  }
+}
+
+@keyframes revealUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
